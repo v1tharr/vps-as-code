@@ -2,4 +2,3 @@ all:
   hosts:
     vps:
       ansible_host: 203.0.113.10   # документационный адрес, подставь свой в hosts.yml
-      
