@@ -27,7 +27,7 @@ ansible-playbook playbooks/bootstrap.yml
 | Stage | State |
 |-------|-------|
 | Repository skeleton, pre-commit | done |
-| `bootstrap.yml`: user, key, sudo | written, not yet tested on a clean server |
+| `bootstrap.yml`: user, key, sudo | written, tested on a clean server |
 | SSH hardening, nftables, fail2ban, auto-updates | planned |
 | Docker, nginx, TLS | planned |
 | Monitoring (Prometheus, Grafana) | planned |
