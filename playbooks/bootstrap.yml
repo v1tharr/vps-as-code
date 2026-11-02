@@ -1,26 +1,6 @@
 ---
 - name: Create admin user on a fresh server
   hosts: all
-  remote_user: root   # on a fresh server only root exists; ansible.cfg says
-
-  tasks:
-    - name: Create admin user
-      ansible.builtin.user:
-        name: "{{ admin_user }}"
-        shell: /bin/bash
-        create_home: true
-
-    - name: Add public key to admin user
-      ansible.posix.authorized_key:
-        user: "{{ admin_user }}"
-        key: "{{ lookup('ansible.builtin.file', admin_pubkey_file) }}"
-        state: present
-
-    - name: Allow passwordless sudo for admin user
-      ansible.builtin.copy:
-        content: "{{ admin_user }} ALL=(ALL) NOPASSWD:ALL\n"
-        dest: "/etc/sudoers.d/{{ admin_user }}"
-        owner: root
-        group: root
-        mode: "0440"
-        validate: /usr/sbin/visudo -cf %s
+  remote_user: root   # a fresh server has only root; ansible.cfg says username
+  roles:
+    - admin_user

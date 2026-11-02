@@ -1,2 +1,4 @@
 admin_user: vitharr
-admin_pubkey_file: ~/.ssh/vps-as-code.pub
+admin_pubkeys:
+  - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII6mWKym2f1kxO3XR8nWyoZIPa0qsSHO+oOMmXuE3BYW honor-wsl"
+  - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDR2I5odvfEc8RCMTl7OXy2E9/gakd8achwc2dRxael4 pc-wsl"
