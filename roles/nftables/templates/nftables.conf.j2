@@ -1,7 +1,8 @@
 #!/usr/sbin/nft -f
 # Managed by Ansible, changes will be overwritten
 
-flush ruleset
+table inet filter
+flush table inet filter
 
 table inet filter {
     chain input {

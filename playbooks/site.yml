@@ -6,3 +6,4 @@
     - admin_user
     - ssh
     - nftables
+    - fail2ban

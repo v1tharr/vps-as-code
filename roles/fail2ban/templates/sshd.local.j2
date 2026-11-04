@@ -1,0 +1,11 @@
+# Managed by Ansible, changes will be overwritten
+[DEFAULT]
+banaction = nftables
+banaction_allports = nftables[type=allports]
+bantime = {{ fail2ban_bantime }}
+findtime = {{ fail2ban_findtime }}
+maxretry = {{ fail2ban_maxretry }}
+
+[sshd]
+enabled = true
+backend = systemd
