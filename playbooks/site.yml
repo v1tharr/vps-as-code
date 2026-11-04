@@ -5,3 +5,4 @@
   roles:
     - admin_user
     - ssh
+    - nftables
